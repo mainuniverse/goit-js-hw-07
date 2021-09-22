@@ -1,14 +1,11 @@
 const inputEl = document.querySelector('#validation-input');
  const textLength = inputEl.value.length;
-
-  
+ 
 inputEl.addEventListener('blur', () => {
   if (textLength === Number(inputEl.getAttribute('data-length'))) {
-    inputEl.classList.add('valid');
-    inputEl.classList.remove('invalid');
-  } else {
-    inputEl.classList.add('invalid');
-    inputEl.classList.remove('valid');
+    inputEl.classList.replace('invalid", "valid');
+    } else {
+    inputEl.classList.replace('valid', 'invalid');
   }
 });
 
@@ -23,3 +20,17 @@ inputEl.addEventListener('blur', () => {
 //         return fieldInput.classList.add('invalid');};
 //         return fieldInput.classList.add('valid');
 // };
+
+// const inputEl = document.querySelector('#validation-input');
+//  const textLength = inputEl.value.length;
+
+  
+// inputEl.addEventListener('blur', () => {
+//   if (textLength === Number(inputEl.getAttribute('data-length'))) {
+//     inputEl.classList.add('valid');
+//     inputEl.classList.remove('invalid');
+//   } else {
+//     inputEl.classList.add('invalid');
+//     inputEl.classList.remove('valid');
+//   }
+// });

@@ -1,20 +1,28 @@
 const inputEl = document.querySelector('#name-input');
 const nameEl = document.querySelector('#name-output');
+
 inputEl.addEventListener('input', () => {
-    nameEl.textContent = inputEl.value === '' ? 'незнакомец' : inputEl.value;
+   nameEl.textContent = inputEl.value.trim() === '' ? 'незнакомец' : inputEl.value ;
+    
 });
+// const result = inputEl.trim;
+// console.log(result);
+
+// const inputEl = document.querySelector('#name-input');
+// const outputEl = document.querySelector('#name-output');
 
 
-// const inputName = document.querySelector('#name-input');
-// const outputName = document.querySelector('#name-output');
+// const nameAdd = nameEl.textContent;
+// nameAdd.trim  = inputEl.value === '' ? 'незнакомец' : inputEl.value ;
 
-// function inputNewName(event) {
-//     if (inputName === "") {
-//         outputName.textContent = 'незнакомец'
-//     } else {
-//         outputName.textContent = event.target.value
+// const inputEl = document.getElementById("name-input");
+// const nameOutput = document.getElementById("name-output");
+
+// inputEl.oninput = function () {
+//     if (inputEl.value === '') {
+//        nameOutput.innerHTML = 'незнакомец';
+//     } else{
+//     nameOutput.innerHTML = input.value;
 //     }
-        
-//   }
-
-// inputName.addEventListener('input', inputNewName);
+// }
+// inputEl.addEventListener('input', inputEl);
