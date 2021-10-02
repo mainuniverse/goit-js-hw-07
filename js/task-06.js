@@ -1,13 +1,18 @@
 const inputEl = document.querySelector('#validation-input');
- const textLength = inputEl.value.length;
- 
+const textLength = inputEl.value.length;
+
 inputEl.addEventListener('blur', () => {
   if (textLength === Number(inputEl.getAttribute('data-length'))) {
-    inputEl.classList.replace('invalid", "valid');
-    } else {
+    inputEl.classList.add('valid');
+    inputEl.classList.replace('invalid', 'valid');
+  } else {
     inputEl.classList.replace('valid', 'invalid');
   }
 });
+
+//почти супер, но не хватает начального задания класса 
+//если лимит === длине вводимого то { добавляем класс валид и реплейсим класс инвалид - валид } 
+//иначе { добавляем класс инвалид реплейсим класс валид инвалид }
 
 // const inputEl = document.querySelector('#validation-input');
 // inputEl.addEventListener('change', inputElCheck);
@@ -24,7 +29,6 @@ inputEl.addEventListener('blur', () => {
 // const inputEl = document.querySelector('#validation-input');
 //  const textLength = inputEl.value.length;
 
-  
 // inputEl.addEventListener('blur', () => {
 //   if (textLength === Number(inputEl.getAttribute('data-length'))) {
 //     inputEl.classList.add('valid');
